@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-green-pastel">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/home"><h3>Paysheet labs</h3></a>
+    <a class="navbar-brand" routerLink="/home"><h3>Paysheet labs</h3></a>
     <button
       class="navbar-toggler"
       type="button"
@@ -14,9 +14,9 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav ms-auto" *ngIf="userService.loggedIn()">
-        <a class="nav-link" href="/home">Inicio</a>
-        <a class="nav-link" href="/register" *ngIf="userService.isAdmin()">Registrar usuarios</a>
-        <a class="nav-link" href="/nominas" *ngIf="userService.isAdmin()">Nominas</a>
+        <a class="nav-link" routerLink="/home">Inicio</a>
+        <a class="nav-link" routerLink="/register" *ngIf="userService.isAdmin()">Registrar usuarios</a>
+        <a class="nav-link" routerLink="/nominas" *ngIf="userService.isAdmin()">Nominas</a>
       </div>
       
 
