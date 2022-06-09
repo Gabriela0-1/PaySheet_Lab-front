@@ -1,3 +1,12 @@
 export const environment = {
-  production: true
+  production: true,
+  API_URL: 'https://paysheetbackendapp.herokuapp.com/api',
+  //DISCOUNTS FOR SALARY
+  EPS: 65000, // THE COMPANY PAY SOME PERCENT AND THE EMPLOYE PAY OTHER PERCENT
+  COMPENSATION_BOX: 65000, // THE COMPANY PAY SOME PERCENT AND THE EMPLOYE PAY OTHER PERCENT
+  ARL_TYPE1: 4000,
+  ARL_TYPE2: 5000,
+  ARL_TYPE3: 6000,
+  ARL_TYPE4: 7000,
+  ARL_TYPE5: 8000,
 };

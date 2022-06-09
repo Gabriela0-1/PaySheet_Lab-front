@@ -83,7 +83,13 @@ export class NominasComponent implements OnInit {
     try {
       this.userService.activateUser(id).subscribe((res: any) => {
         this.getUserByFilter();
-        alert('usuario activado');
+        Swal.fire({
+          position: 'top-end',
+          icon: 'success',
+          title: 'Usuario Activado',
+          showConfirmButton: false,
+          timer: 1000
+        })
       });
     } catch (error) {
       console.log();
@@ -95,7 +101,13 @@ export class NominasComponent implements OnInit {
     try {
       this.userService.deactivateUser(id).subscribe((res: any) => {
         this.getUserByFilter();
-        alert('usuario desactivado');
+        Swal.fire({
+          position: 'top-end',
+          icon: 'info',
+          title: 'Usuario Desactivado',
+          showConfirmButton: false,
+          timer: 1000
+        })
       });
     } catch (error) {
       console.log();

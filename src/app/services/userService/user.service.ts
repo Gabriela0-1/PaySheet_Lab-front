@@ -28,7 +28,7 @@ export class UserService {
   */
 
   login(credentials: any){
-    return this.http.post(`${this.url_api}user/login`, credentials)
+    return this.http.post(`${this.url_api}/user/login`, credentials)
   }
 
   /*
@@ -40,27 +40,27 @@ export class UserService {
   }
   */
   register(formUser: any){
-    return this.http.post(`${this.url_api}user/create-user`, formUser)
+    return this.http.post(`${this.url_api}/user/create-user`, formUser)
   }
 
   updateUser(id: string, formUser: any){
-    return this.http.post(`${this.url_api}user/update-user/${id}`, formUser)
+    return this.http.post(`${this.url_api}/user/update-user/${id}`, formUser)
   }
 
   getUsersByFilter(filter: string) {
-    return this.http.get(`http://localhost:5000/api/payments/getByFilter?filter=${filter}`)
+    return this.http.get(`${this.url_api}/payments/getByFilter?filter=${filter}`)
   }
 
   getOneUser(id: string) {
-    return this.http.get(`http://localhost:5000/api/user/get-one-user/${id}`)
+    return this.http.get(`${this.url_api}/user/get-one-user/${id}`)
   }
 
   activateUser(id: string){
-    return this.http.get(`${this.url_api}user/activate/${id}`)
+    return this.http.get(`${this.url_api}/user/activate/${id}`)
   }
   
   deactivateUser(id: string){
-    return this.http.get(`${this.url_api}user/deactivate/${id}`)
+    return this.http.get(`${this.url_api}/user/deactivate/${id}`)
   }
 
   loggedIn(){
